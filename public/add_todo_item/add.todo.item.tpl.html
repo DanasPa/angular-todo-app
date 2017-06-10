@@ -1,0 +1,19 @@
+<div class="addtodo-wrapper">
+    <div class="input-group">
+        <span class="input-group-btn">
+            <button ng-click="vm.toggleAllTodoCompletion()"
+                    class="btn btn-default" title="Check all items" 
+                    type="button">
+                <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+            </button>
+        </span>
+        <input ng-model="vm.todoText" type="text" class="form-control">
+        <span class="input-group-btn">
+            <button ng-click="vm.addTodoItem(vm.todoText)" 
+                    class="btn btn-success" 
+                    title="Add item" type="button">
+                <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>
+        </span>
+    </div>
+</div>

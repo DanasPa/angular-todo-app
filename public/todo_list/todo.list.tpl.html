@@ -1,0 +1,17 @@
+<ul class="list-group" ng-if="!!vm.todos.length">
+    <li ng-repeat="todo in vm.todos track by $index" 
+        class="list-group-item"
+        ng-class="{'completed-todo': todo.completed}">
+        <input ng-click="vm.toggleTodoCompletion($index)"
+               ng-checked="todo.completed"
+               type="checkbox" 
+               title="Mark item as done" 
+               class="pull-left">
+        <span>{{todo.todoText}}</span>
+        <button ng-click="vm.deleteTodo($index)"
+                class="btn btn-danger btn-xs pull-right delete-btn" 
+                title="Remove item">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+    </li>
+</ul>
